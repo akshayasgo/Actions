@@ -10,11 +10,13 @@ jobs:
         run: echo "This is Build"
   Test:
     runs-on: ubuntu-latest
+    needs: Build
     steps:
       - name: Testing the Code
         run: echo "this is test"
   Deploy:
     runs-on: ubuntu-latest
+    needs: Test
     steps:
       - name: Deployment check
         run: echo "deployment 1 test"
