@@ -1,0 +1,9 @@
+name: manual trigger test
+on:
+  workflow_dispatch
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    tasks:
+      - name: Build manual test
+        run: echo " this is test we are doing by running it manually"
