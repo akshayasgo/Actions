@@ -1,0 +1,24 @@
+name: testing github actions
+on:
+  push:
+    branches: main
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: building_code
+        run: echo "This is Build"
+  Test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Testing the Code
+        run: echo "this is test"
+  Deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deployment check
+        run: echo "deployment 1 test"
+      - name: Deployment check 2
+        run: echo "This is deployment test 2"
+      - name: Deployment test 3
+        run: echo "This is deployment test 3"
