@@ -4,9 +4,9 @@ on:
 jobs:
   Build:
     runs-on: ubuntu-latest
-      steps:
-        - name: Multiline Test
-          run: |
-            echo "this is first line"
-            x="akshay"
-            echo "hello" $x
+    steps:
+      - name: Multiline Test
+        run: |
+          echo "this is first line"
+          x="akshay"
+          echo "hello" $x
