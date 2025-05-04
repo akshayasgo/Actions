@@ -5,5 +5,9 @@ jobs:
   Build:
     runs-on: ubuntu-latest
     steps:
-      - name: Build manual test
-        run: echo " this is test we are doing by running it manually"
+      - name: Checkout calling repository
+        uses: actions/checkout@v4
+      - name: Use Hello Name Action
+        uses: akshayasgo/hello-name-action@main # Replace 'main' with your branch or tag
+        with:
+          name: "User from Other Repo"
